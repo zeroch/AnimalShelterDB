@@ -6,21 +6,20 @@
 
 
 $mysql_serv_name='localhost';
-$mysql_username='ze';
-$mysql_pw='chen';
-$mysql_database='animal';
+$mysql_username='cs4400_Team_7';
+$mysql_pw='NJkRsVM_';
+$mysql_database='cs4400_Team_7';
 
 $con=mysql_connect($mysql_serv_name,
-	$mysql_username,
-	$mysql_pw,
-	$mysql_database );
+					$mysql_username,
+					$mysql_pw,
+					$mysql_database );
 if(!$con){
 	die('could not connect:'.mysql_error());
 }else {
-
+	
 	echo 'connection established';
-
-}
+	
 
 ?>
 <script type="text/javascript">

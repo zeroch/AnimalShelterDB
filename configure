@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# set variable 
+# use your username and password for you GTID. 
+
+ID=zchen311
+
+# this is default with our team, dont change this . 
+
+mysqlID=cs4400_Team_7
+mysqlPSD=NJkRsVM_
+dbname=cs4400_Team_7
+
+# cd to folder
+# cd cs4400
+
+PATH=${PATH}:/usr/local/mysql/bin/
+
+mysql_start
+
+# copy out your local database, for here, I use my username root, and password
+# after -p, and the database name is animal. uncomment next line export this. 
+# you need to custumize your code to fit your enviroment. 
+
+# mysqldump -u root -pchenze animal > animal.sql
+
+scp *  $ID@academic-mysql.cc.gatech.edu:cs4400_Team_7_html/
+
+ssh $ID@academic-mysql.cc.gatech.edu "cd cs4400_Team_7_html;
+mysql -u $mysqlID -p$mysqlPSD $dbname < animal.sql;"
+
+
+ 
+
+
+
