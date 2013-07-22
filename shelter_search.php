@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 
-<html>
+
+<head>
 <?php
 
 
@@ -20,11 +20,8 @@ if(!$con){
 	
 	echo 'connection established';
 	
-
+}
 ?>
-
-<head>
-    <title></title>
 </head>
 
 <body>
@@ -32,7 +29,6 @@ if(!$con){
     <h1>Atlanta Pet Adoption Consortium</h1>
 <p1>Shelter Search Results for Zipcode:</p1>
 <?php
-
 $zip=$_GET["zip"];
 
 	mysql_select_db("animal",$con);
@@ -45,8 +41,7 @@ $zip=$_GET["zip"];
 	<th>Address</th>
 	<th>Zipcode</th>
 	</tr>";
-	
-	
+		
 	if($result){
 	while($row=mysql_fetch_array($result)){
 		
@@ -58,9 +53,8 @@ $zip=$_GET["zip"];
 		echo "</tr>";
 	}
 	echo "</table>";
+
 }
-mysql_close($con);
 
 ?>
 </body>
-</html>

@@ -1,4 +1,3 @@
-<html>
 
 
 <h1>
@@ -15,5 +14,3 @@ Atlanta Pet Adoption Consortium
 </form>
 
 
-
-</html>

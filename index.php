@@ -24,7 +24,7 @@ if(!$con){
 <h1 style="margin-left: 100px"> Atlanta  Pet Adoption Consortium </h1>
 <hr/>
 
-<p1 style="margin-left: 50px ">Guest <a href="/guest_login.php"><button type="button"> Guest Login</button>  </a> <br/> </p1>
+<p1 style="margin-left: 50px ">Guest <a href="./guest_login.php"><button type="button"> Guest Login</button>  </a> <br/> </p1>
 
 <p1 style="margin-left: 50px">Employee </p1>
 
