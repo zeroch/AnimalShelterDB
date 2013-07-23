@@ -6,7 +6,7 @@
 $mysql_serv_name='localhost';
 $mysql_username='cs4400_Team_7';
 $mysql_pw='NJkRsVM_';
-$mysql_database='cs4400_Team_7';
+$mysql_database='test';
 
 $con=mysql_connect($mysql_serv_name,
 					$mysql_username,
@@ -33,20 +33,16 @@ if(!$con){
 <form action="e_login.php" method="get">
 
 <p style="margin-left: 80px"> Shlter Name:
-
-	
-<select name=s_name><option value=shelter name>Shelter name </option>
-
+<select name=s_name>
+<option value=shelter name>Shelter name </option>
 <?php
-mysql_select_db("animal",$con);
+mysql_select_db($mysql_database,$con);
 $result=mysql_query("SELECT * FROM shelter");
 
 while($row=mysql_fetch_array($result)){
 
      echo "<option value=" .$row[name]. ">" .$row[name]."</option>";
-	}
-	
-
+	}	
 ?>
 </select>
 </p>

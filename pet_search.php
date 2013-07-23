@@ -3,7 +3,7 @@
 $mysql_serv_name='localhost';
 $mysql_username='cs4400_Team_7';
 $mysql_pw='NJkRsVM_';
-$mysql_database='animal';
+$mysql_database='test';
 
 $con=mysql_connect($mysql_serv_name,
     $mysql_username,
@@ -87,34 +87,41 @@ while($row=mysql_fetch_array($result)){
     
      var g_id=document.getElementById("gender");
      
-     var t_list={1:'dog',2:'cat'};
-     var a_list={1:'small',2:'young',3:'old',4:'dying'};
-     var g_list={1:'male',2:'female'};
+     var t_list=["dog","cat"]
+     var a_list=["small","young","old","dying"]
+     var g_list=["male","female"];
      
      function init(t_id,a_id,g_id) { 
      
      t_id.options[0]=new Option('type','');      
       for(var key in t_list){
-          t_id.options[key]=new Option(t_list[key],key);
+          t_id.options[key]=new Option(t_list[key],t_list[key]);
           }
       
      
       a_id.options[0]=new Option('age','');
       for(var key in a_list){
-          a_id.options[key]=new Option(a_list[key],key);
+          a_id.options[key]=new Option(a_list[key],a_list[key]);
           }
           
           
       g_id.options[0]=new Option('gender','');
       for(var key in g_list){
-          g_id.options[key]=new Option(g_list[key],key);
+          g_id.options[key]=new Option(g_list[key],g_list[key]);
           }
           
       }
        
      function get_breed(t_id,b_id) {
-        for(var key in breed[t_id.value]){
-            b_id.options[key]=new Option(breed[t_id.value][key],key);
+       if(t_id.value==="dog"){
+	       var temp=1;
+	       
+       }else {
+       var temp=2;
+       }
+       
+        for(var key in breed[temp]){
+            b_id.options[key]=new Option(breed[temp][key],breed[temp][key]);
         
         }
       }       

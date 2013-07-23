@@ -5,7 +5,7 @@
 $mysql_serv_name='localhost';
 $mysql_username='cs4400_Team_7';
 $mysql_pw='NJkRsVM_';
-$mysql_database='cs4400_Team_7';
+$mysql_database='test';
 
 $con=mysql_connect($mysql_serv_name,
     $mysql_username,
@@ -35,7 +35,28 @@ if(!$con){
 $zip=$_GET["zip"];
 $type=$_GET["type"];
 $breed=$_GET["breed"];
-
+$gender=$_GET["gender"];
+$age=$_GET["age"];
+echo "<table border='1'>
+	<tr>
+	<th>zip</th>
+	<th>type</th>
+	<th>breed</th>
+	<th>gender</th>
+	<th>age</th>
+	</tr>";
+	
+echo "<table border='1'>
+	<tr>
+	<th>".$zip."</th>
+	<th>".$type."</th>
+	<th>".$breed."</th>
+	<th>".$gender."</th>
+	<th>".$age."</th>
+	</tr>";
+		
+		
+		
 
 ?>
 

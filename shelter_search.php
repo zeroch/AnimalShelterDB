@@ -8,7 +8,7 @@
 $mysql_serv_name='localhost';
 $mysql_username='cs4400_Team_7';
 $mysql_pw='NJkRsVM_';
-$mysql_database='cs4400_Team_7';
+$mysql_database='test';
 
 $con=mysql_connect($mysql_serv_name,
 					$mysql_username,
@@ -18,7 +18,7 @@ if(!$con){
 	die('could not connect:'.mysql_error());
 }else {
 	
-	echo 'connection established';
+	echo 'connection established with '.$mysql_database;
 	
 }
 ?>
@@ -31,7 +31,7 @@ if(!$con){
 <?php
 $zip=$_GET["zip"];
 
-	mysql_select_db("animal",$con);
+	mysql_select_db("test",$con);
 	$result=mysql_query("SELECT * from shelter WHERE zipcode=$zip");
 	
 	echo "<table border='1'>
