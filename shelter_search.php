@@ -29,7 +29,7 @@ if(!$con){
     <h1>Atlanta Pet Adoption Consortium</h1>
 <p1>Shelter Search Results for Zipcode:</p1>
 <?php
-$zip=$_GET["zip"];
+	$zip=$_GET["zip"];
 
 	mysql_select_db("test",$con);
 	$result=mysql_query("SELECT * from shelter WHERE zipcode=$zip");

@@ -55,6 +55,9 @@ echo "<table border='1'>
 	<th>".$age."</th>
 	</tr>";
 		
+
+
+
 		
 		
 
