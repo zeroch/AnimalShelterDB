@@ -27,7 +27,7 @@ mysql_start
 scp *  $ID@academic-mysql.cc.gatech.edu:cs4400_Team_7_html/
 
 ssh $ID@academic-mysql.cc.gatech.edu "cd cs4400_Team_7_html;
-mysql -u $mysqlID -p$mysqlPSD $dbname < animal.sql;"
+mysql -u $mysqlID -p$mysqlPSD $dbname < cs4400_Team_7.sql;"
 
 
  
