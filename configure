@@ -16,18 +16,18 @@ dbname=cs4400_Team_7
 
 PATH=${PATH}:/usr/local/mysql/bin/
 
-mysql_start
+#mysql_start
 
 # copy out your local database, for here, I use my username root, and password
 # after -p, and the database name is animal. uncomment next line export this. 
 # you need to custumize your code to fit your enviroment. 
 
 # mysqldump -u root -pchenze animal > animal.sql
-
+rm *.zip
 scp *  $ID@academic-mysql.cc.gatech.edu:cs4400_Team_7_html/
-
-ssh $ID@academic-mysql.cc.gatech.edu "cd cs4400_Team_7_html;
-mysql -u $mysqlID -p$mysqlPSD $dbname < cs4400_Team_7.sql;"
+zip  cs4400_Team_7 *
+#ssh $ID@academic-mysql.cc.gatech.edu "cd cs4400_Team_7_html;
+#mysql -u $mysqlID -p$mysqlPSD $dbname < cs4400_Team_7.sql;"
 
 
  

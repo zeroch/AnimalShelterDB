@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 22, 2013 at 11:33 PM
+-- Generation Time: Jul 24, 2013 at 09:40 PM
 -- Server version: 5.0.95
 -- PHP Version: 5.1.6
 
@@ -206,7 +206,7 @@ INSERT INTO `Donates` (`name`, `phone`, `s_name`, `amount`, `d_date`) VALUES
 ('Yang', '6788904567', 'ABC', 1000.00, '2012-03-24'),
 ('Wang', '1238904567', 'ada', 5000.00, '2012-10-24'),
 ('Ken', '6781234567', 'bb', 5000.00, '2012-05-24'),
-('Jill', '6789874567', 'chen', 2000.00, '2013-06-24'),
+('Jill', '6789874567', 'chen', 2000.00, '2013-07-24'),
 ('Frank', '4049874567', 'ee', 1500.00, '2012-12-24'),
 ('Eric', '4041234567', 'fff', 1500.00, '2012-11-22'),
 ('David', '4048904567', 'ze', 1800.00, '2013-01-22');
@@ -306,22 +306,23 @@ CREATE TABLE IF NOT EXISTS `event` (
 --
 
 INSERT INTO `event` (`s_name`, `e_date`, `location`, `description`, `type`) VALUES
-('ABC', '2013-07-16', '109 South side Dr, Duluth, GA 30332', 'Buckhead Junior Leaders sponsored event at Buckhead Diner', ''),
+('ABC', '2013-07-16', '109 South side Dr, Duluth, GA 30332', 'Buckhead Junior Leaders sponsored event at Buckhead Diner', 'Adoption'),
 ('aa', '2012-07-24', '115 cove creek Dr, Norcross, GA 30318', 'AB Junior Leaders sponsored event at Buckhead Diner', 'Fundraising'),
-('aa', '2013-06-24', '115 South side Dr, Duluth, GA 30332', 'ABC Junior Leaders sponsored event at Buckhead Diner', ''),
+('aa', '2013-06-24', '115 South side Dr, Duluth, GA 30332', 'ABC Junior Leaders sponsored event at Buckhead Diner', 'Adoption'),
 ('fff', '2013-02-16', '12 North Side Dr, Atlanta, GA 30332', 'AAS  sponsored event at Turner Field', 'Fundraising'),
 ('ee', '2012-03-16', '12 river Side Dr, Atlanta, GA 30380', 'Northview Junior Leaders sponsored event at Buckhead Diner', 'Fundraising'),
 ('ee', '2012-09-24', '1200 oak creek Dr, Atlanta, GA 30180', 'Johns creek Leaders sponsored event at Johns creek Diner', 'Fundraising'),
 ('ABC', '2013-03-16', '18 South view Dr, Duluth, GA 30332', 'All  sponsored event at Turner Field', 'Fundraising'),
-('ze', '2012-07-24', '250 North Ave, Atlanta, GA 30332', 'RR  sponsored event at Square Field', ''),
-('ze', '2013-04-24', '250 North Side Dr, Atlanta, GA 30332', 'ABC  sponsored event at Turner Field', ''),
+('ze', '2012-07-24', '250 North Ave, Atlanta, GA 30332', 'RR  sponsored event at Square Field', 'Adoption'),
+('ze', '2013-04-24', '250 North Side Dr, Atlanta, GA 30332', 'ABC  sponsored event at Turner Field', 'Adoption'),
 ('ze', '2013-01-21', '29 kingsley Ave, Atlanta, GA 30302', 'CC  sponsored event at Square Field', 'Fundraising'),
 ('bb', '2012-09-16', '300 cove Dr, Atlanta, GA 30302', ' SDH Junior Leaders sponsored event at Buckhead Diner', 'Fundraising'),
-('bb', '2013-05-16', '300 cove Dr, Atlanta, GA 30302', ' SDH Junior Leaders sponsored event at Buckhead Diner', ''),
-('fff', '2012-12-16', '300 North Side Dr, Atlanta, GA 30332', 'AJC  sponsored event at Turner Field', ''),
-('ee', '2013-04-16', '300 North Side Dr, Atlanta, GA 30332', 'AJC  sponsored event at Turner Field', ''),
-('ABC', '2012-10-16', '300 South view Dr, Duluth, GA 30332', 'ACJ  sponsored event at Turner Field', ''),
-('ee', '2013-03-16', '73 northriver Side Dr, Atlanta, GA 30380', 'Buckhead Junior Leaders sponsored event at Buckhead Diner', '');
+('bb', '2013-05-16', '300 cove Dr, Atlanta, GA 30302', ' SDH Junior Leaders sponsored event at Buckhead Diner', 'Adoption'),
+('fff', '2012-12-16', '300 North Side Dr, Atlanta, GA 30332', 'AJC  sponsored event at Turner Field', 'Adoption'),
+('ee', '2013-04-16', '300 North Side Dr, Atlanta, GA 30332', 'AJC  sponsored event at Turner Field', 'Adoption'),
+('ABC', '2012-10-16', '300 South view Dr, Duluth, GA 30332', 'ACJ  sponsored event at Turner Field', 'Adoption'),
+('ee', '2013-03-16', '73 northriver Side Dr, Atlanta, GA 30380', 'Buckhead Junior Leaders sponsored event at Buckhead Diner', 'Adoption'),
+('chen', '2013-07-23', 'in my home ', 'dfdf', 'Fundraising');
 
 -- --------------------------------------------------------
 
@@ -375,31 +376,34 @@ CREATE TABLE IF NOT EXISTS `pet` (
   KEY `a_name` (`a_name`,`a_phone`),
   KEY `f_name` (`f_name`,`f_phone`),
   KEY `cat_breed` (`cat_breed`),
-  KEY `dog_breed` (`dog_breed`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  KEY `dog_breed` (`dog_breed`),
+  KEY `f_name_2` (`f_name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `pet`
 --
 
 INSERT INTO `pet` (`pet_id`, `shelter_name`, `pet_name`, `gender`, `age`, `assign_date`, `a_name`, `a_phone`, `a_date`, `f_name`, `f_phone`, `f_date`, `pet_type`, `cat_breed`, `dog_breed`) VALUES
-(1, 'aa', 'Yuanshuo', '', 2, '2012-10-16', NULL, NULL, NULL, NULL, NULL, NULL, 'cat', 'Aegean', NULL),
+(1, 'aa', 'Yuanshuo', '', 2, '2012-10-16', NULL, NULL, NULL, '0', NULL, NULL, 'cat', 'Aegean', NULL),
 (1, 'ABC', 'oppo', 'male', 2, '2012-11-17', 'Edward', '1120120416', '2012-04-16', NULL, NULL, NULL, 'cat', 'Bengal', NULL),
-(1, 'ada', 'pii', '', 2, '2011-12-07', 'Jeff', '9020130616', '2013-06-16', NULL, NULL, NULL, 'dog', NULL, 'Airedale Terrier'),
+(1, 'ada', 'pii', '', 2, '2011-12-07', 'Jeff', '9020130616', '2013-07-24', NULL, NULL, NULL, 'dog', NULL, 'Airedale Terrier'),
 (1, 'bb', 'emily', '', 3, '2012-06-07', NULL, NULL, NULL, NULL, NULL, NULL, 'dog', NULL, 'Boerboel'),
-(1, 'chen', 'mei', '', 3, '2011-12-07', NULL, NULL, NULL, 'Amy', '1234567890', '2013-06-27', 'dog', NULL, 'Cairn Terrier'),
+(1, 'chen', 'mei', '', 3, '2011-12-07', NULL, NULL, NULL, 'Amy', '1234567890', '2013-07-24', 'dog', NULL, 'Cairn Terrier'),
 (1, 'ee', 'pie', 'male', 2, '2012-11-17', 'Robert', '3320130216', '2013-02-16', NULL, NULL, NULL, 'cat', 'Javanese', NULL),
-(1, 'fff', 'pie', '', 3, '2012-10-07', NULL, NULL, NULL, 'Harry', '3147483647', '2013-03-27', 'dog', NULL, 'Chihuahua'),
+(1, 'fff', 'pie', 'male', 3, '2012-10-07', NULL, NULL, NULL, 'Harry', '3147483647', '2013-03-27', 'dog', NULL, 'Chihuahua'),
 (1, 'ze', 'fireball', '', 3, '2011-03-07', NULL, NULL, NULL, 'Johnny', '7708906669', '2013-05-17', 'dog', NULL, 'Cairn Terrier'),
-(2, 'aa', 'mi', '', 2, '2012-10-16', NULL, NULL, NULL, NULL, NULL, NULL, 'dog', NULL, 'Chihuahua'),
+(2, 'aa', 'mi', 'male', 2, '2012-10-16', NULL, NULL, NULL, NULL, NULL, NULL, 'dog', NULL, 'Chihuahua'),
 (2, 'ABC', 'opii', '', 2, '2012-12-27', 'Erica', '2220121022', '2012-10-22', NULL, NULL, NULL, 'cat', 'Chausie', NULL),
 (2, 'ada', 'iii', '', 2, '2012-02-07', NULL, NULL, NULL, NULL, NULL, NULL, 'dog', NULL, 'Airedale Terrier'),
 (2, 'bb', 'Frank', '', 3, '2012-06-07', NULL, NULL, NULL, NULL, NULL, NULL, 'dog', NULL, 'Boerboel'),
-(2, 'chen', 'snowball', '', 3, '2011-12-07', NULL, NULL, NULL, 'David', '2141234567', '2013-05-27', 'dog', NULL, 'Cairn Terrier'),
-(2, 'fff', 'pen', '', 3, '2011-10-07', NULL, NULL, NULL, 'Jay', '7707483689', '2013-03-24', 'dog', NULL, 'Chihuahua'),
+(2, 'chen', 'snowball', '', 3, '2011-12-07', NULL, NULL, NULL, 'David', '2141234567', '2013-07-24', 'dog', NULL, 'Cairn Terrier'),
+(2, 'fff', 'pen', 'male', 3, '2011-10-07', NULL, NULL, NULL, 'Jay', '7707483689', '2013-03-24', 'dog', NULL, 'Chihuahua'),
 (2, 'ze', 'ball', '', 3, '2011-03-07', NULL, NULL, NULL, NULL, NULL, NULL, 'dog', NULL, 'Cairn Terrier'),
+(3, 'aa', 'oo', 'male', 2, '2013-01-04', NULL, NULL, NULL, 'Amy', '1234567890', '2013-07-11', 'dog', NULL, 'Chihuahua'),
 (3, 'bb', 'Jeff', '', 3, '2011-12-07', NULL, NULL, NULL, NULL, NULL, NULL, 'dog', NULL, 'Cairn Terrier'),
-(3, 'fff', 'Hong', '', 3, '2012-09-07', NULL, NULL, NULL, 'Jerry', '6787088647', '2013-03-04', 'cat', 'Chausie', NULL);
+(3, 'fff', 'Hong', '', 3, '2012-09-07', NULL, NULL, NULL, 'Jerry', '6787088647', '2013-03-04', 'cat', 'Chausie', NULL),
+(4, 'chen', 'chen', 'male', 2, '2013-07-24', NULL, NULL, NULL, NULL, NULL, NULL, 'cat', 'Bombay', NULL);
 
 -- --------------------------------------------------------
 
@@ -429,6 +433,164 @@ INSERT INTO `shelter` (`name`, `phone`, `st_city_state`, `zipcode`, `Hours_open`
 ('ee', '1121474836', '75 Marietta St, Atlanta GA 30332', 30090, '9am – 4pm'),
 ('fff', '4041234567', '25 Marietta St, Atlanta GA 30332', 30091, '10am – 3pm'),
 ('ze', '3053310000', '3235 post woods dr', 30339, '10am – 5pm');
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `s_e0`
+--
+CREATE TABLE IF NOT EXISTS `s_e0` (
+`sname` varchar(60)
+,`No_E` bigint(21)
+);
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `s_name0`
+--
+CREATE TABLE IF NOT EXISTS `s_name0` (
+`name` varchar(60)
+);
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `t_ad0`
+--
+CREATE TABLE IF NOT EXISTS `t_ad0` (
+`sssname` varchar(60)
+,`T_ad` bigint(21)
+);
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `t_d0`
+--
+CREATE TABLE IF NOT EXISTS `t_d0` (
+`ssname` varchar(60)
+,`T_Do` decimal(32,2)
+);
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `t_re0`
+--
+CREATE TABLE IF NOT EXISTS `t_re0` (
+`ssssname` varchar(60)
+,`T_red` bigint(21)
+);
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `v10`
+--
+CREATE TABLE IF NOT EXISTS `v10` (
+`name` varchar(60)
+,`No_E` bigint(21)
+);
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `v20`
+--
+CREATE TABLE IF NOT EXISTS `v20` (
+`name` varchar(60)
+,`No_E` bigint(21)
+,`T_ad` bigint(21)
+);
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `v30`
+--
+CREATE TABLE IF NOT EXISTS `v30` (
+`name` varchar(60)
+,`No_E` bigint(21)
+,`T_ad` bigint(21)
+,`T_Do` decimal(32,2)
+);
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `v40`
+--
+CREATE TABLE IF NOT EXISTS `v40` (
+`name` varchar(60)
+,`No_E` bigint(21)
+,`T_ad` bigint(21)
+,`T_Do` decimal(32,2)
+,`T_red` bigint(21)
+);
+-- --------------------------------------------------------
+
+--
+-- Structure for view `s_e0`
+--
+DROP TABLE IF EXISTS `s_e0`;
+-- in use(#1142 - SHOW VIEW command denied to user 'cs4400_Team_7'@'localhost' for table 's_e0')
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `s_name0`
+--
+DROP TABLE IF EXISTS `s_name0`;
+-- in use(#1142 - SHOW VIEW command denied to user 'cs4400_Team_7'@'localhost' for table 's_name0')
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `t_ad0`
+--
+DROP TABLE IF EXISTS `t_ad0`;
+-- in use(#1142 - SHOW VIEW command denied to user 'cs4400_Team_7'@'localhost' for table 't_ad0')
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `t_d0`
+--
+DROP TABLE IF EXISTS `t_d0`;
+-- in use(#1142 - SHOW VIEW command denied to user 'cs4400_Team_7'@'localhost' for table 't_d0')
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `t_re0`
+--
+DROP TABLE IF EXISTS `t_re0`;
+-- in use(#1142 - SHOW VIEW command denied to user 'cs4400_Team_7'@'localhost' for table 't_re0')
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `v10`
+--
+DROP TABLE IF EXISTS `v10`;
+-- in use(#1142 - SHOW VIEW command denied to user 'cs4400_Team_7'@'localhost' for table 'v10')
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `v20`
+--
+DROP TABLE IF EXISTS `v20`;
+-- in use(#1142 - SHOW VIEW command denied to user 'cs4400_Team_7'@'localhost' for table 'v20')
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `v30`
+--
+DROP TABLE IF EXISTS `v30`;
+-- in use(#1142 - SHOW VIEW command denied to user 'cs4400_Team_7'@'localhost' for table 'v30')
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `v40`
+--
+DROP TABLE IF EXISTS `v40`;
+-- in use(#1142 - SHOW VIEW command denied to user 'cs4400_Team_7'@'localhost' for table 'v40')
 
 --
 -- Constraints for dumped tables

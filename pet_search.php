@@ -3,7 +3,7 @@
 $mysql_serv_name='localhost';
 $mysql_username='cs4400_Team_7';
 $mysql_pw='NJkRsVM_';
-$mysql_database='test';
+$mysql_database='cs4400_Team_7';
 
 $con=mysql_connect($mysql_serv_name,
     $mysql_username,
@@ -32,7 +32,6 @@ while($row=mysql_fetch_array($result)){
 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
 <head>
@@ -58,7 +57,7 @@ while($row=mysql_fetch_array($result)){
         <select id="gender" name="gender"></select>
         <input  type="submit" value="submit" >
     </form>
-    
+    <button type="button" onclick="location.href='guest_main.php'">Back</button>
 </body>
 
  <script language="JavaScript" type="text/javascript">
@@ -87,8 +86,8 @@ while($row=mysql_fetch_array($result)){
     
      var g_id=document.getElementById("gender");
      
-     var t_list=["dog","cat"]
-     var a_list=["small","young","old","dying"]
+     var t_list=["dog","cat"];
+     var a_list=[1,2,3,4,5,6,7];
      var g_list=["male","female"];
      
      function init(t_id,a_id,g_id) { 

@@ -6,7 +6,7 @@
 $mysql_serv_name='localhost';
 $mysql_username='cs4400_Team_7';
 $mysql_pw='NJkRsVM_';
-$mysql_database='test';
+$mysql_database='cs4400_Team_7';
 
 $con=mysql_connect($mysql_serv_name,
 					$mysql_username,
@@ -21,10 +21,10 @@ if(!$con){
 }
 
 ?>
-<h1 style="margin-left: 100px"> Atlanta  Pet Adoption Consortium </h1>
+<h1 style="margin-left: 100px"> Atlanta  Pet Adoption Consortium  <img src="./pic/logo.png" width="80" height="80" /></h1>
 <hr/>
 
-<p1 style="margin-left: 50px ">Guest <a href="./guest_login.php"><button type="button"> Guest Login</button>  </a> <br/> </p1>
+<p1 style="margin-left: 50px ">Guest <a href="./guest_main.php"><button type="button"> Guest Login</button>  </a> <br/> </p1>
 
 <p1 style="margin-left: 50px">Employee </p1>
 

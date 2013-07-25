@@ -1,9 +1,9 @@
 <?php
-
+date_default_timezone_set('America/New_York');
 $mysql_serv_name='localhost';
 $mysql_username='cs4400_Team_7';
 $mysql_pw='NJkRsVM_';
-$mysql_database='test';
+$mysql_database='cs4400_Team_7';
 
 $con=mysql_connect($mysql_serv_name,
     $mysql_username,
@@ -18,12 +18,15 @@ if(!$con){
 
 mysql_select_db($mysql_database,$con);
 
+  if(isset($_COOKIE['shelter'])){
+    echo "Welcome to the ".$_COOKIE['shelter'];
+    }
+$s_name=$_COOKIE['shelter'];    
 $name=$_GET["p_name"];
 $type=$_GET["type"];
 $breed=$_GET["breed"];
 $gender=$_GET["gender"];
 $age=$_GET["age"];
-$s_name="aa";
 $cur_date=date("Y-m-d");
 
 if($type=="cat"){
@@ -36,7 +39,9 @@ echo "<br/>".$q1."<br/>";
 if(!mysql_query($q1,$con)){
 	die('Error: '.mysql_error());
 }
-echo "add pet successful";
+
+echo "<script>alert('add pet successful');
+	 				location.href='add_pet.php';</script>";
 
 mysql_close();
 ?>
